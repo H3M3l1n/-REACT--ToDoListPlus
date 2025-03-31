@@ -5,7 +5,7 @@ const ToDoListTitle = () => {
                 textAlign: 'center',
             }}
         >
-            Ваш ТуДу
+            Список справ
         </h1>
     );
 };
