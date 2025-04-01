@@ -32,6 +32,7 @@ const ToDoListTextField = ({ handleAddItem }) => {
         } else {
             setError('');
             handleAddItem(important, timer, text);
+            setText('');
         }
     };
 
