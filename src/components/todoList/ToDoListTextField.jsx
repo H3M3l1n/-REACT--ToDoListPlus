@@ -73,6 +73,12 @@ const ToDoListTextField = ({ handleAddItem }) => {
                     onChange={(event) => {
                         setText(event.target.value);
                     }}
+                    onKeyDown={(event) => {
+                        if (event.key === 'Enter') {
+                            event.preventDefault();
+                            handleSubmitItem();
+                        }
+                    }}
                 />
                 <Button
                     variant="text"
