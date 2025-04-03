@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Box, Container } from '@mui/material';
-import './ToDoList.sass';
 import { db, getDoc, doc, arrayUnion, updateDoc } from '../../firebase.js';
+
+import './ToDoList.sass';
 import ToDoListItem from './ToDoListItem';
 import ToDoListTextField from './ToDoListTextField';
 import ToDoListTitle from './ToDoListTitle.jsx';
@@ -97,7 +98,18 @@ const ToDoList = () => {
             <Box
                 sx={{
                     width: '100%',
+                    paddingRight: '10px',
                     overflowY: 'auto',
+                    '&::-webkit-scrollbar': {
+                        width: '6px',
+                    },
+                    '&::-webkit-scrollbar-track': {
+                        background: 'transparent',
+                    },
+                    '&::-webkit-scrollbar-thumb': {
+                        backgroundColor: 'goldenRod',
+                        borderRadius: '5px',
+                    },
                 }}
             >
                 {itemData
