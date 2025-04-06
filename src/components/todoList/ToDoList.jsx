@@ -81,6 +81,10 @@ const ToDoList = () => {
             }
         } catch (error) {
             console.error('Помилка при видаленні задачі: ', error);
+
+            setItemData((prevData) =>
+                prevData.filter((item) => item.id !== itemId)
+            );
         }
     };
 
